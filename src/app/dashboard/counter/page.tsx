@@ -1,8 +1,13 @@
+import { Counter } from "@/app/components";
 
-export default function NamePage() {
+export const metadata = {
+ title: 'Counter Page',
+ description: 'A simple counter element',
+};
+
+export default function CounterPage() {
+
   return (
-    <div>
-      <h1>Counter Page</h1>
-    </div>
+    <Counter />
   );
 }
