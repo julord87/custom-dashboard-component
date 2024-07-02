@@ -1,4 +1,4 @@
-import { Counter } from "@/app/components";
+import { Counter } from "@/components";
 
 export const metadata = {
  title: 'Counter Page',
