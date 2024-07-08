@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { count } from 'console';
 
 interface CounterState {
     count: number
