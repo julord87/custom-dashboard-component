@@ -1,4 +1,4 @@
-import { SimplePokemon } from "../../interfaces"
+import { SimplePokemon } from "../../../interfaces"
 import PokemonCard from "./PokemonCard"
 
 

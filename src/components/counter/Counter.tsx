@@ -2,8 +2,8 @@
 import { useAppDispatch, useAppSelector } from "@/store";
 
 export default function Counter() {
-  const count = useAppSelector((state) => state.counter.count);
 
+  const count = useAppSelector((state) => state.counter.count);
   const dispatch = useAppDispatch();
 
   return (

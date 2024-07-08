@@ -13,6 +13,12 @@ const counterSlice = createSlice({
   initialState,
   reducers: {
 
+    initCounterState(state, action: PayloadAction<number>) {
+        if(action.payload < 0) action.payload = 0
+
+        state.count = action.payload
+    },
+
     increment(state) {
         state.count += 1
     },
@@ -28,6 +34,6 @@ const counterSlice = createSlice({
   }
 });
 
-export const {increment, decrement, reset} = counterSlice.actions
+export const {increment, decrement, reset, initCounterState} = counterSlice.actions
 
 export default counterSlice.reducer
