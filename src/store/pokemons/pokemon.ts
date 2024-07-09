@@ -5,14 +5,13 @@ interface PokemonsState {
     [key: string]: SimplePokemon;
 }
 
+const getInitialState = () => {
+    const favorites = localStorage.getItem('favorites');
+    return favorites ? JSON.parse(favorites) : {};
+}
+
 const initialState: PokemonsState = {
-    '1': { id: '1', name: 'bulbasaur' },
-    '2': { id: '2', name: 'ivysaur' },
-    '3': { id: '3', name: 'venusaur' },
-    '4': { id: '4', name: 'charmander' },
-    '5': { id: '5', name: 'charmeleon' },
-    '6': { id: '6', name: 'charizard' },
-    '7': { id: '7', name: 'squirtle' },
+    ...getInitialState()
 };
 
 const pokemonSlice = createSlice({
@@ -27,6 +26,9 @@ const pokemonSlice = createSlice({
             } else {
                 state[id] = pokemon;
             }
+
+            //TODO: lo siguiente no se debe de hacer en Redux
+            localStorage.setItem('favorites', JSON.stringify(state));
         }
     }
 });
