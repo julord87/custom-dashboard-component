@@ -1,15 +1,12 @@
-
-import { PokemonGrid } from "@/components";
-import FavoritePokemon from "@/components/pokemon/FavoritePokemon";
-import { useAppSelector } from "@/store";
-
+import FavoritePokemon, { NoFavorites } from "@/components/pokemon/FavoritePokemon";
+import { IoHeartOutline } from "react-icons/io5";
 
 export const metadata = {
  title: 'Favoritos - Listado de Pokemons',
  description: 'Listado de Pokemons favoritos',
 };
 
-const PokemonsPage = () => {
+const PokemonsPage = async () => {
 
   return (
     <div className="flex flex-col">
