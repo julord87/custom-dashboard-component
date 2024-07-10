@@ -7,7 +7,7 @@ import { localStorageMiddleware } from './middlewares/localstorage-middleware'
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
-    pokemons: pokemonReducer
+    pokemons: pokemonReducer,
   },
   // middleware: (getDefaultMiddleware) => getDefaultMiddleware()
   //   .concat(localStorageMiddleware)
