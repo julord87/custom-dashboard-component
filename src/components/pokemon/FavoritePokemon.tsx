@@ -24,7 +24,7 @@ const FavoritePokemon = () => {
         }
     </>
   )
-}
+};
 
 export const NoFavorites = () => {
     return (
